@@ -2,12 +2,6 @@
 
 buildscript {
 
-    java {
-        toolchain {
-            languageVersion = JavaLanguageVersion.of(17)
-        }
-    }
-
     repositories {
         google()
         jcenter()
@@ -30,3 +24,5 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
